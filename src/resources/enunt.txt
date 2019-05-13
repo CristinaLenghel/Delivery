@@ -1,0 +1,55 @@
+Please implement a small logistics application that will simulate package delivery.
+
+For each package you need to have the following data:
+
+- target location
+
+- target distance in km
+
+- package value
+
+- delivery date
+
+
+
+The system should be able to group the packages based on the target location and delivery date.
+
+For each group of packages which are delivered to the same location on a given date, the system must calculate:
+
+- the group value considerng the package value
+
+- the group revenue considering a fixed price of 1 LEU / 1 km
+
+
+Each group of packages must be delivered by a separate thread that will print to the console a line like in the following example:
+
+--------------------------------------------------
+
+[Delivering for <Apahida> and date <2017-09-02> in <15> seconds]
+
+--------------------------------------------------
+
+
+
+Each delivery action must be completed in a time interval equal in seconds with the distance in km to destination.
+
+E.g. if there is a location 20 km far, the delivery for that location should take 20 seconds.
+
+
+
+RESULT: After all the package groups in all delivery dates are complete, print the following to console:
+
+- total value of all delivered packages
+
+- total value of the revenue computed for all groups delivered
+
+
+
+The test data must be loaded from a file in the classpath containing the following data lines:
+
+HINT:
+
+- create a main class that triggers the load of the data from a file into a List
+
+- with the above list, trigger the calculation process
+
